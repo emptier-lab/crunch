@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crunch.space</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="bg-overlay"></div>
+    
+    <div class="main-wrapper">
+        <div class="page-header">
+            <h1 class="main-title">crunch.space</h1>
+            <p class="header-subtitle">A useful tool for crunchlabs, we have found over 100,000 selfies!</p>
+        </div>
+        
+        <div class="control-panel">
+            <div class="filter-controls">
+                <div class="control-row">
+                    <div class="input-group">
+                        <label>Scans:</label>
+                        <div class="select-dropdown" id="scans-dropdown">
+                            <div class="dropdown-trigger" data-value="1000">
+                                <span>1000</span>
+                                <i class="fas fa-chevron-down arrow-icon"></i>
+                            </div>
+                            <div class="dropdown-menu">
+                                <div class="menu-item" data-value="100">100</div>
+                                <div class="menu-item" data-value="500">500</div>
+                                <div class="menu-item" data-value="1000">1000</div>
+                                <div class="menu-item" data-value="2000">2000</div>
+                                <div class="menu-item" data-value="5000">5000</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>ID Length:</label>
+                        <div class="select-dropdown" id="length-dropdown">
+                            <div class="dropdown-trigger" data-value="7">
+                                <span>7</span>
+                                <i class="fas fa-chevron-down arrow-icon"></i>
+                            </div>
+                            <div class="dropdown-menu">
+                                <div class="menu-item" data-value="5">5</div>
+                                <div class="menu-item" data-value="6">6</div>
+                                <div class="menu-item" data-value="7">7</div>
+                                <div class="menu-item" data-value="8">8</div>
+                                <div class="menu-item" data-value="10">10</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label>Delay:</label>
+                        <div class="select-dropdown" id="delay-dropdown">
+                            <div class="dropdown-trigger" data-value="100">
+                                <span>100ms</span>
+                                <i class="fas fa-chevron-down arrow-icon"></i>
+                            </div>
+                            <div class="dropdown-menu">
+                                <div class="menu-item" data-value="50">50ms</div>
+                                <div class="menu-item" data-value="100">100ms</div>
+                                <div class="menu-item" data-value="200">200ms</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="primary-btn" onclick="startSearch()">
+                            <i class="fas fa-play"></i>
+                            Search
+                        </button>
+                        <button class="secondary-btn" onclick="generateRandomRange()">
+                            <i class="fas fa-random"></i>
+                            Lucky
+                        </button>
+                        <button class="secondary-btn" onclick="clearResults()">
+                            <i class="fas fa-trash"></i>
+                            Clear
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="progress-tracker" id="progress-bar" style="display: none;">
+            <div class="progress-fill" id="progress-fill"></div>
+            <div class="progress-info">
+                <span id="progress-current">0</span> / <span id="progress-total">0</span>
+                <span id="results-count">0 found</span>
+            </div>
+        </div>
+        
+        <div class="results-area">
+            <div class="results-header">
+                <h3>Scan Log</h3>
+                <div class="header-actions">
+                    <button class="export-button" onclick="exportResults()" style="display: none;">
+                        <i class="fas fa-download"></i>
+                        Export
+                    </button>
+                </div>
+            </div>
+            
+            <div class="scan-log" id="log-container">
+                <div class="empty-state">
+                    <i class="fas fa-satellite"></i>
+                    <p>Preparing for world domination</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
