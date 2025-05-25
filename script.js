@@ -392,7 +392,7 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCount();
 });
 
-// Aliases for onclick handlers
+// just junk
 function startSearch() { search(); }
 function generateRandomRange() { lucky(); }
 function clearResults() { clear(); }
