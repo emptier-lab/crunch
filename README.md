@@ -1,6 +1,6 @@
 
 <div align="center">
-  <img src="./header.png" alt="crunch.space header" width="800"/>
+  <img src="./header.png" alt="crunch.space header" width="600"/>
 </div>
 
 A tool for discovering private content on CrunchLabs.
