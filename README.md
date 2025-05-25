@@ -1,5 +1,9 @@
 # crunch.space
 
+<div align="center">
+  <img src="./header.png" alt="crunch.space header" width="500"/>
+</div>
+
 A tool for discovering private content on CrunchLabs.
 
 ## What's This About?
@@ -18,7 +22,7 @@ Basically it's like a digital lockpick for their system.
 
 ## The Issue
 
-Without going into too much detail, the problem is in how CrunchLabs generates their identifiers. They're using a method that makes it possible to predict valid IDs, which means you can find images that users probably thought were private.
+Without going into too much detail, the problem is in how CrunchLabs generates their image identifiers. They're using a method that makes it possible to predict valid IDs, which means you can find images that users probably thought were private.
 
 This is a classic case of "security through obscurity" not working - just because a URL is hard to guess doesn't mean it's secure if there's a pattern.
 
